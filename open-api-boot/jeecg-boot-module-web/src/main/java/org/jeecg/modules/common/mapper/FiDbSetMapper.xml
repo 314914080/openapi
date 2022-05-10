@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.common.mapper.FiDbSetMapper">
+
+<select id="selectDbKeyByType" resultType="java.lang.String">
+
+select  dbcode  from  fi_dbset where dbname=#{dbType}
+
+</select>
+
+    <select id="selectDbKeyById" resultType="org.jeecg.modules.common.entity.FiDbset">
+
+select  *  from  fi_dbset where id=#{id}
+
+</select>
+
+</mapper>
